@@ -7,13 +7,13 @@ Este é um projeto Node.js que oferece funcionalidades para gerenciar produtos e
 ## Pré-requisitos
 
 - Node.js instalado na sua máquina.
-- Banco de dados PostgreSQL configurado e acessível. Você pode ajustar as configurações de conexão no arquivo `db/db.js`.
+- Banco de dados SQLite configurado e acessível. Você pode ajustar as configurações de conexão no arquivo `db/db.js`.
 - Dependências Node.js instaladas. Você pode instalá-las com o seguinte comando:
 
   ```bash
   npm install
 
-# POST /add_produtos - Cria um novo produto:
+### POST /add_produtos - Cria um novo produto:
 
 {
   "nome": "Nome do Produto",
@@ -21,37 +21,37 @@ Este é um projeto Node.js que oferece funcionalidades para gerenciar produtos e
   "preco": 10.99,
   "link": "URL_do_Produto"
 }
-# GET /produtos - Lista todos os produtos cadastrados.
+### GET /produtos - Lista todos os produtos cadastrados.
 
-# GET /produtos/:id - Lista um produto específico pelo ID.
+### GET /produtos/:id - Lista um produto específico pelo ID.
 
-# PUT /produtos/:id - Atualiza um produto existente:
+### PUT /produtos/:id - Atualiza um produto existente:
 {
   "nome": "Novo Nome",
   "descricao": "Nova Descrição",
   "preco": 19.99,
   "link": "Nova_URL_do_Produto"
 }
-# DELETE /produtos/:id - Exclui um produto pelo ID.
+### DELETE /produtos/:id - Exclui um produto pelo ID.
 
 Usuários
-# POST /usuarios/Cadastrar - Cria um novo usuário:
+### POST /usuarios/Cadastrar - Cria um novo usuário:
 {
   "nome": "Nome do Usuário",
   "email": "email@exemplo.com",
   "senha": "senha_segura"
 }
-# GET /usuarios - Lista todos os usuários cadastrados (requer autenticação via JWT).
+### GET /usuarios - Lista todos os usuários cadastrados (requer autenticação via JWT).
 
-# GET /usuarios/:id - Lista um usuário específico pelo ID (requer autenticação via JWT).
+### GET /usuarios/:id - Lista um usuário específico pelo ID (requer autenticação via JWT).
 
-# PUT /usuarios/:id - Atualiza um usuário existente:
+### PUT /usuarios/:id - Atualiza um usuário existente:
 {
   "nome": "Novo Nome",
   "email": "novo_email@exemplo.com",
   "senha": "nova_senha_segura"
 }
-# DELETE /usuarios/:id - Exclui um usuário pelo ID (requer autenticação via JWT).
+### DELETE /usuarios/:id - Exclui um usuário pelo ID (requer autenticação via JWT).
 
-# Autenticação
-# POST /login - Verifica as credenciais do usuário e gera um token JWT para autenticação.
+### Autenticação
+### POST /login - Verifica as credenciais do usuário e gera um token JWT para autenticação.
